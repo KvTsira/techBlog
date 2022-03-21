@@ -3,7 +3,7 @@ const { User, Post, Comment } = require("../../models");
 
 router.get("/", (req, res) => {
   User.findAll({})
-    .then((dbUserData) => res.json(dbUserData))
+    .then((recordSet) => res.json(recordSet))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -30,13 +30,13 @@ router.get("/:id", (req, res) => {
       },
     ],
   })
-    .then((dbUserData) => {
-      if (!dbUserData) {
+    .then((recordSet) => {
+      if (!recordSet) {
         res.status(404).json({ message: "No user found at this id!" });
         return;
       }
 
-      res.json(dbUserData);
+      res.json(recordSet);
     })
     .catch((err) => {
       console.log(err);
@@ -49,13 +49,13 @@ router.post("/", (req, res) => {
     username: req.body.username,
     password: req.body.password,
   })
-    .then((dbUserData) => {
+    .then((recordSet) => {
       req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
+        req.session.user_id = recordSet.id;
+        req.session.username = recordSet.username;
         req.session.loggedIn = true;
 
-        res.json(dbUserData);
+        res.json(recordSet);
       });
     })
     .catch((err) => {
@@ -70,13 +70,13 @@ router.post("/login", (req, res) => {
       username: req.body.username,
     },
   })
-    .then((dbUserData) => {
-      if (!dbUserData) {
+    .then((recordSet) => {
+      if (!recordSet) {
         res.status(400).json({ message: "No user found at this username" });
         return;
       }
 
-      const validatePassword = dbUserData.checkPassword(req.body.password);
+      const validatePassword = recordSet.checkPassword(req.body.password);
 
       if (!validatePassword) {
         res.status(400).json({ message: "Incorrect password" });
@@ -84,11 +84,11 @@ router.post("/login", (req, res) => {
       }
 
       req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
+        req.session.user_id = recordSet.id;
+        req.session.username = recordSet.username;
         req.session.loggedIn = true;
 
-        res.json({ user: dbUserData, message: "You are no logged in!" });
+        res.json({ user: recordSet, message: "You are no logged in!" });
       });
     })
     .catch((err) => {
@@ -114,13 +114,13 @@ router.put("/:id", (req, res) => {
       id: req.params.id,
     },
   })
-    .then((dbUserData) => {
-      if (!dbUserData) {
+    .then((recordSet) => {
+      if (!recordSet) {
         res.status(404).json({ message: "No user found at this id!" });
         return;
       }
 
-      res.json(dbUserData);
+      res.json(recordSet);
     })
     .catch((err) => {
       console.log(err);
@@ -134,13 +134,13 @@ router.delete("/:id", (req, res) => {
       id: req.params.id,
     },
   })
-    .then((dbUserData) => {
-      if (!dbUserData) {
+    .then((recordSet) => {
+      if (!recordSet) {
         res.status(404).json({ message: "No user found at this id" });
         return;
       }
 
-      res.json(dbUserData);
+      res.json(recordSet);
     })
     .catch((err) => {
       console.log(err);

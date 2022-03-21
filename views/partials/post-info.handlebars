@@ -1,6 +1,9 @@
 <article class="post">
   <div class="title-wrapper">
-    <h2 class="title">{{title}}</h2>
+    <a href="/post/{{id}}">
+      <h2 class="title">{{title}}</h2></a>
+
+    {{!-- <h2 class="title">{{title}}</h2> --}}
     <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
   </div>
   <div class="post-text">

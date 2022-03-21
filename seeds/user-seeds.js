@@ -3,27 +3,27 @@ const { User, Post } = require("../models");
 
 const userdata = [
   {
-    username: "alesmonde0",
+    username: "lilleh",
     password: "password123",
   },
   {
-    username: "jwilloughway1",
+    username: "levani",
     password: "password123",
   },
   {
-    username: "iboddam2",
+    username: "svetlana",
     password: "password123",
   },
   {
-    username: "dstanmer3",
+    username: "gurami",
     password: "password123",
   },
   {
-    username: "djiri4",
+    username: "rufa",
     password: "password123",
   },
   {
-    username: "jmacarthur9",
+    username: "natela",
     password: "password123",
   },
 ];
