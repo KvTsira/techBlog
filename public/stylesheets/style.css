@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #f9e0ae;
+  background-color: #c8d8e4;
 }
 
 a {
@@ -22,7 +22,7 @@ ol {
 
 header {
   width: 100%;
-  background-color: #682c0e;
+  background-color: #2b6777;
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -46,7 +46,7 @@ header nav a {
 }
 header nav button {
   margin-left: 5rem;
-  background: #682c0e;
+  background: #2b6777;
   box-shadow: 0px 0px 0px transparent;
   border: 0px solid transparent;
   text-shadow: 0px 0px 0px transparent;
@@ -68,14 +68,14 @@ header nav button {
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  background-color: #682c0e;
+  background-color: #2b6777;
   color: #f9e0ae;
   padding: 1rem;
 }
 .post-text {
   width: 60rem;
   height: 7rem;
-  border: 3px solid #682c0e;
+  border: 3px solid #2b6777;
   border-radius: 5px;
   padding: 1rem;
   overflow-y: scroll;
@@ -89,8 +89,8 @@ header nav button {
   margin: 0 auto;
 }
 .comments-wrapper h2 {
-  color: #682c0e;
-  border-bottom: 1px solid #682c0e;
+  color: #2b6777;
+  border-bottom: 1px solid #2b6777;
 }
 .comment-form {
   margin-top: 1rem;
@@ -99,15 +99,15 @@ header nav button {
   width: 100%;
   height: 5rem;
   padding: 0.5rem;
-  color: #682c0e;
-  background-color: #e9dcc3;
+  color: #2b6777;
+  background-color: #f2f2f2;
 }
 .comment-form button {
   position: relative;
   top: 0;
   float: right;
-  background-color: #682c0e;
-  color: #f9e0ae;
+  background-color: #52ab98;
+  color: white;
   padding: 0.5rem;
   border-radius: 5px;
 }
@@ -124,7 +124,7 @@ header nav button {
   align-items: center;
 }
 .dashboard-wrapper h2 a {
-  color: #682c0e;
+  color: #2b6777;
   margin-top: 1rem;
   font-size: 3rem;
 }
@@ -133,7 +133,7 @@ header nav button {
 }
 .dashboard-title {
   text-align: center;
-  color: #682c0e;
+  color: #2b6777;
   font-size: 2rem;
 }
 .edit-post-btn,
@@ -143,8 +143,8 @@ header nav button {
 .create-btn,
 .submit-login,
 .submit-signup {
-  background-color: #682c0e;
-  color: #e9dcc3;
+  background-color: #52ab98;
+  color: white;
   padding: 0.5rem;
   border-radius: 5px;
 }
@@ -164,14 +164,14 @@ header nav button {
 .back-btn {
   margin-left: 1rem;
   padding: 0.5rem;
-  background-color: #682c0e;
+  background-color: #2b6777;
   color: #e9dcc3;
   font-size: 2rem;
   border-radius: 5px;
 }
 .edit-post h2,
 .add-post h2 {
-  color: #682c0e;
+  color: #2b6777;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -184,15 +184,15 @@ header nav button {
   padding: 0.5rem;
   width: 20rem;
   margin-bottom: 1rem;
-  color: #682c0e;
-  background-color: #e9dcc3;
+  color: #2b6777;
+  background-color: #f2f2f2;
   border-radius: 5px;
 }
 #post-text {
   padding: 0.5rem;
   height: 5rem;
-  color: #682c0e;
-  background-color: #e9dcc3;
+  color: #2b6777;
+  background-color: #f2f2f2;
   border-radius: 5px;
 }
 .save-post-btn {
@@ -216,7 +216,7 @@ header nav button {
 }
 .login-wrapper h2,
 .signup-wrapper h2 {
-  color: #682c0e;
+  color: #2b6777;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -231,7 +231,7 @@ header nav button {
 #signup-form div input {
   margin-top: 0.5rem;
   padding: 0.5rem;
-  color: #682c0e;
+  color: #2b6777;
 }
 .submit-login,
 .submit-signup {
@@ -252,7 +252,7 @@ footer {
   width: 100%;
   height: 10rem;
   color: #e9dcc3;
-  background: #682c0e;
+  background: #2b6777;
   display: flex;
   justify-content: center;
   align-items: center;
